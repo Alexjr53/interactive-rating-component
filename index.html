@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <div class="logo"><img src="src/images/icon-star.svg" alt="icone de uma estrela"></div>
+            <span></span>
+            <h1 class="title">How did we do?</h1>
+            <p class="description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+            <form action="POST" class="form">
+                <div class="input-container">
+                    <input type="radio" name="rating" id="one" class="radio">
+                    <label for="one" class="label">1</label>
+                    <input type="radio" name="rating" id="two" class="radio">
+                    <label for="two" class="label">2</label>
+                    <input type="radio" name="rating" id="three" class="radio">
+                    <label for="three" class="label">3</label>
+                    <input type="radio" name="rating" id="four" class="radio">
+                    <label for="four" class="label">4</label>
+                    <input type="radio" name="rating" id="five" class="radio">
+                    <label for="five" class="label">5</label>
+                </div>
+                <button class="btn-submit" type="submit">submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
