@@ -1,0 +1,79 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+}
+
+.container .card{
+    background-color: var(--card-bg-color);
+    width: 41rem;
+    height: 41.5rem;
+    border-radius: 2.7rem;
+    padding: 3rem;
+}
+
+.container .card .logo img{
+    background-color: var(--logo-bg-color);
+    border-radius: 50%;
+    padding: 1.5rem;
+    
+}
+
+.container .card .title{
+    font-size: 2.8rem;
+    color: white;
+    margin-top: 3rem;
+}
+
+.container .card .description{
+    font-size: 1.5rem;
+    color: hsl(217, 12%, 63%);
+    margin-top: 1rem;
+    line-height: 2.2rem;
+}
+
+.container .card .form{
+    display: block;
+    margin-top: 3.3rem;
+    
+}
+
+.container .card .form .input-container{
+    display: flex;
+    justify-content: center;
+}
+
+.container .card .form .radio{
+    display: none;
+}
+
+.container .card .form .label{
+    text-align: center;
+    padding: 14px 22px;
+    border-radius: 50%;
+    color: hsl(216, 12%, 54%);
+    background-color: var(--logo-bg-color);
+    font-size: 1.8rem;
+    margin-right: 1.7rem;
+    cursor: pointer;
+}
+
+.container .card .form .input-container .label:nth-child(10){
+    margin-right: 0;
+}
+
+.container .card .form .btn-submit{
+    display: block;
+    margin-top: 3rem;
+    width: 100%;
+    height: 4.5rem;
+    border-radius: 2.5rem;
+    border: none;
+    font-size: 1.4rem;
+    color: white;
+    letter-spacing: 0.3rem;
+    text-transform:uppercase;
+    background-color: rgb(255, 123, 0);
+}
