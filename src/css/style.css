@@ -22,13 +22,13 @@
     
 }
 
-.container .card .title{
+.container .card .title, .back-side .title{
     font-size: 2.8rem;
     color: white;
     margin-top: 3rem;
 }
 
-.container .card .description{
+.container .card .description, .back-side .description{
     font-size: 1.5rem;
     color: hsl(217, 12%, 63%);
     margin-top: 1rem;
@@ -95,31 +95,31 @@
     color: hsl(25, 97%, 53%);
 }
 
-.hidden{
-    display: none;
-}
 
 .back-side{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: var(--card-bg-color);
+    width: 41rem;
+    height: 41.5rem;
+    border-radius: 2.7rem;
+    padding: 3rem;
 }
 
 .back-side img{
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
-.back-side div{
-    padding: 0.3rem 1rem;
+.back-side .rating-selected{
+    padding: 0.6rem 1.5rem;
     margin-top: 3rem;
+    border-radius: 5rem;
     background-color: var(--logo-bg-color);
+    color: hsl(25, 97%, 53%);
 }
 
-.back-side h1{
-    margin-top: 3rem;
-}
-
-.back-side p{
-    margin-top: 3rem;
+.hidden{
+    display: none;
 }
