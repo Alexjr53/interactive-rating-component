@@ -6,6 +6,7 @@
     background-color: var(--main-bg-color);
 }
 
+
 .container .card{
     background-color: var(--card-bg-color);
     width: 41rem;
@@ -60,6 +61,16 @@
     cursor: pointer;
 }
 
+.container .card .form .label:hover{
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+}
+
+.container .card .form input:checked+.label{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
 .container .card .form .input-container .label:nth-child(10){
     margin-right: 0;
 }
@@ -75,5 +86,40 @@
     color: white;
     letter-spacing: 0.3rem;
     text-transform:uppercase;
-    background-color: rgb(255, 123, 0);
+    background-color: hsl(25, 97%, 53%);
+    cursor: pointer;
+}
+
+.container .card .form .btn-submit:hover{
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+
+.hidden{
+    display: none;
+}
+
+.back-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.back-side img{
+    margin-top: 3rem;
+}
+
+.back-side div{
+    padding: 0.3rem 1rem;
+    margin-top: 3rem;
+    background-color: var(--logo-bg-color);
+}
+
+.back-side h1{
+    margin-top: 3rem;
+}
+
+.back-side p{
+    margin-top: 3rem;
 }
