@@ -19,7 +19,7 @@
             <span></span>
             <h1 class="title">How did we do?</h1>
             <p class="description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-            <form action="POST" class="form">
+            <form action="GET" class="form">
                 <div class="input-container">
                     <input type="radio" name="rating" id="one" class="radio">
                     <label for="one" class="label">1</label>
@@ -37,7 +37,7 @@
         </div>
         <div class="back-side hidden">
             <img src="src/images/illustration-thank-you.svg" alt="">
-            <div class="rating-selected"></div>
+            <p>You selected <span id="rating-selected"></span> out of 5</p>
             <h1 class="title">Thank you!</h1>
             <p class="description">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
         </div>
