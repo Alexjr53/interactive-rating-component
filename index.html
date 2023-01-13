@@ -16,28 +16,28 @@
     <main class="container">
         <div class="card">
             <div class="logo"><img src="src/images/icon-star.svg" alt="icone de uma estrela"></div>
-            <span></span>
             <h1 class="title">How did we do?</h1>
             <p class="description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
             <form action="GET" class="form">
                 <div class="input-container">
                     <input type="radio" name="rating" id="one" class="radio">
-                    <label for="one" class="label">1</label>
+                    <label for="one" class="ratings-btn">1</label>
                     <input type="radio" name="rating" id="two" class="radio">
-                    <label for="two" class="label">2</label>
+                    <label for="two" class="ratings-btn">2</label>
                     <input type="radio" name="rating" id="three" class="radio">
-                    <label for="three" class="label">3</label>
+                    <label for="three" class="ratings-btn">3</label>
                     <input type="radio" name="rating" id="four" class="radio">
-                    <label for="four" class="label">4</label>
+                    <label for="four" class="ratings-btn">4</label>
                     <input type="radio" name="rating" id="five" class="radio">
-                    <label for="five" class="label">5</label>
+                    <label for="five" class="ratings-btn">5</label>
                 </div>
                 <button class="btn-submit" type="submit">submit</button>
             </form>
         </div>
-        <div class="back-side hidden">
+        <span class="error-message"></span>
+        <div class="back-side-card hidden">
             <img src="src/images/illustration-thank-you.svg" alt="">
-            <p>You selected <span id="rating-selected"></span> out of 5</p>
+            <p class="rating-message">You selected <span id="rating-selected"></span> out of 5</p>
             <h1 class="title">Thank you!</h1>
             <p class="description">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
         </div>
