@@ -1,0 +1,14 @@
+@media(max-width: 485px){
+    .container .card, .back-side-card{
+        width: 31rem;
+    }
+
+    .container .card .form .ratings-btn{
+        padding: 0.9rem 1.7rem;
+        font-size: 1.5rem;
+    }
+
+    .error-message{
+        font-size: 1.3rem;
+    }
+}
