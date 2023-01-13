@@ -1,13 +1,13 @@
 .container{
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--main-bg-color);
 }
 
-
-.container .card{
+.container .card, .back-side-card{
     background-color: var(--card-bg-color);
     width: 41rem;
     height: 41.5rem;
@@ -15,22 +15,28 @@
     padding: 3rem;
 }
 
-.container .card .logo img{
-    background-color: var(--logo-bg-color);
-    border-radius: 50%;
-    padding: 1.5rem;
-    
+.back-side-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.container .card .title, .back-side .title{
+.container .card .logo img{
+    background-color: var(--neutral-medium-color);
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+
+.container .card .title, .back-side-card .title{
     font-size: 2.8rem;
     color: white;
     margin-top: 3rem;
 }
 
-.container .card .description, .back-side .description{
+.container .card .description, .back-side-card .description{
     font-size: 1.5rem;
-    color: hsl(217, 12%, 63%);
+    color: var(--neutral-soft-color);
     margin-top: 1rem;
     line-height: 2.2rem;
 }
@@ -38,7 +44,6 @@
 .container .card .form{
     display: block;
     margin-top: 3.3rem;
-    
 }
 
 .container .card .form .input-container{
@@ -50,29 +55,29 @@
     display: none;
 }
 
-.container .card .form .label{
+.container .card .form .ratings-btn{
     text-align: center;
-    padding: 14px 22px;
+    padding: 1.4rem 2.2rem;
     border-radius: 50%;
-    color: hsl(216, 12%, 54%);
-    background-color: var(--logo-bg-color);
+    color: var(--neutral-soft-color);
+    background-color: var(--neutral-medium-color);
     font-size: 1.8rem;
     margin-right: 1.7rem;
     cursor: pointer;
 }
 
-.container .card .form .label:hover{
-    background-color: hsl(216, 12%, 54%);
-    color: white;
-}
-
-.container .card .form input:checked+.label{
-    background-color: hsl(25, 97%, 53%);
-    color: white;
-}
-
-.container .card .form .input-container .label:nth-child(10){
+.container .card .form .input-container .ratings-btn:nth-child(10){
     margin-right: 0;
+}
+
+.container .card .form .ratings-btn:hover{
+    background-color: var(--neutral-soft-color);
+    color: white;
+}
+
+.container .card .form input:checked+.ratings-btn{
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .container .card .form .btn-submit{
@@ -86,40 +91,54 @@
     color: white;
     letter-spacing: 0.3rem;
     text-transform:uppercase;
-    background-color: hsl(25, 97%, 53%);
+    background-color: var(--primary-color);
     cursor: pointer;
 }
 
 .container .card .form .btn-submit:hover{
     background-color: white;
-    color: hsl(25, 97%, 53%);
+    color: var(--primary-color);
 }
 
-
-.back-side{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: var(--card-bg-color);
-    width: 41rem;
-    height: 41.5rem;
-    border-radius: 2.7rem;
-    padding: 3rem;
-}
-
-.back-side img{
+.back-side-card img{
     margin-top: 2rem;
+    transition: ease-in 0.5s;
+    animation: flip-effect 0.5s ease;
 }
 
-.back-side p{
+@-webkit-keyframes flip-effect {
+    0% {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      opacity: 0;
+    }
+  
+    100% {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+}
+
+.back-side-card .rating-message{
     padding: 0.6rem 1.5rem;
+    font-size: 1.6rem;
     margin-top: 3rem;
     border-radius: 5rem;
-    background-color: var(--logo-bg-color);
-    color: hsl(25, 97%, 53%);
+    background-color: var(--neutral-medium-color);
+    color: var(--primary-color);
 }
 
 .hidden{
     display: none;
+}
+
+.error-message{
+    display: none;
+    color: rgba(175, 9, 9, 0.767);
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    background-color: var(--neutral-medium-color);
+    padding: 1rem;
+    border-radius: 2rem;
 }
